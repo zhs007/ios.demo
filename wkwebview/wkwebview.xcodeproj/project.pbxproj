@@ -13,6 +13,8 @@
 		258127362453202100475BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258127342453202100475BFF /* Main.storyboard */; };
 		258127382453202400475BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 258127372453202400475BFF /* Assets.xcassets */; };
 		2581273B2453202400475BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258127392453202400475BFF /* LaunchScreen.storyboard */; };
+		258899002454711200936CFA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258898FF2454711200936CFA /* WebKit.framework */; };
+		258899022454771500936CFA /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258899012454771500936CFA /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		258127372453202400475BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2581273A2453202400475BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2581273C2453202400475BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		258898FF2454711200936CFA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		258899012454771500936CFA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258899002454711200936CFA /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				2581272D2453202100475BFF /* wkwebview */,
 				2581272C2453202100475BFF /* Products */,
+				258898FE2454711100936CFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +64,7 @@
 			children = (
 				2581272E2453202100475BFF /* AppDelegate.swift */,
 				258127302453202100475BFF /* SceneDelegate.swift */,
+				258899012454771500936CFA /* WebView.swift */,
 				258127322453202100475BFF /* ViewController.swift */,
 				258127342453202100475BFF /* Main.storyboard */,
 				258127372453202400475BFF /* Assets.xcassets */,
@@ -65,6 +72,14 @@
 				2581273C2453202400475BFF /* Info.plist */,
 			);
 			path = wkwebview;
+			sourceTree = "<group>";
+		};
+		258898FE2454711100936CFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				258898FF2454711200936CFA /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				258127332453202100475BFF /* ViewController.swift in Sources */,
+				258899022454771500936CFA /* WebView.swift in Sources */,
 				2581272F2453202100475BFF /* AppDelegate.swift in Sources */,
 				258127312453202100475BFF /* SceneDelegate.swift in Sources */,
 			);
