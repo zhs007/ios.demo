@@ -15,6 +15,7 @@
 		2581273B2453202400475BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258127392453202400475BFF /* LaunchScreen.storyboard */; };
 		258899002454711200936CFA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258898FF2454711200936CFA /* WebKit.framework */; };
 		258899022454771500936CFA /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258899012454771500936CFA /* WebView.swift */; };
+		2591CCB824558674000EC498 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 2591CCB724558674000EC498 /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2581273C2453202400475BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		258898FF2454711200936CFA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		258899012454771500936CFA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		2591CCB724558674000EC498 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				2581272E2453202100475BFF /* AppDelegate.swift */,
+				2591CCB724558674000EC498 /* assets */,
 				258127302453202100475BFF /* SceneDelegate.swift */,
 				258899012454771500936CFA /* WebView.swift */,
 				258127322453202100475BFF /* ViewController.swift */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2581273B2453202400475BFF /* LaunchScreen.storyboard in Resources */,
+				2591CCB824558674000EC498 /* assets in Resources */,
 				258127382453202400475BFF /* Assets.xcassets in Resources */,
 				258127362453202100475BFF /* Main.storyboard in Resources */,
 			);
