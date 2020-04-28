@@ -11,6 +11,9 @@ import WebKit
 
 class WebView: WKWebView, WKUIDelegate, WKNavigationDelegate {
 
+    var scriptTimer: Timer?
+    var curPluginName: String?
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -24,11 +27,41 @@ class WebView: WKWebView, WKUIDelegate, WKNavigationDelegate {
         
         uiDelegate = self
         navigationDelegate = self
+        
+//        scriptTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+//            if self.curPluginName != nil {
+////                self.execScriptFile(fn: "6vdy")
+////                self.evaluateJavaScript("window.drakecore.plugins.p" + self.curPluginName! + ".onBodyChildrenNodeChged();") { (result, error) in
+//////                    NSLog("exeScriptFile ok")
+////                }
+//            }
+//        }
+        
+        initJSFile(fn: "wkwebview.bundle")
+        
+    }
+    
+    func initJSFile(fn: String) {
+        if let path = Bundle.main.path(forResource: fn, ofType: "js", inDirectory: "assets/js") {
+            let fm = FileManager()
+            let exists = fm.fileExists(atPath: path)
+            if(exists){
+                let content = fm.contents(atPath: path)
+                if let strScript = String(data: content!, encoding: String.Encoding.utf8) {
+                    let userScript = WKUserScript(source: strScript, injectionTime: WKUserScriptInjectionTime.atDocumentStart, forMainFrameOnly: true)
+                    configuration.userContentController.addUserScript(userScript)
+                     //设置ScriptMessageHandler为self
+//                    configuration.userContentController.add(TabManager.sharedInstance, name: "APPJS")
+                }
+            }
+        }
     }
     
     func loadUrl(string: String) {
         if let url = URL(string: string) {
             load(URLRequest(url: url))
+            
+            curPluginName = nil
         }
     }
     
@@ -50,12 +83,15 @@ class WebView: WKWebView, WKUIDelegate, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         self.load(navigationAction.request)
+//        execScriptFile(fn: "wkwebview.bundle")
         
         return nil
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        execScriptFile(fn: "extlib.bundle")
+//        execScriptFile(fn: "wkwebview.bundle")
+        
+        curPluginName = "6vdy"
 //        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
